@@ -98,3 +98,8 @@ A few more generated images are featured below.
 
 
 ![2184](https://github.com/user-attachments/assets/fe108bb2-96ac-4881-b0e2-89b2e33ae7bf)
+
+
+## Acknowledgements:
+1. The Unet model implementation takes inspiration from the following repo : https://github.com/explainingai-code/DDPM-Pytorch
+2. The FID score calculation was done by a custom method , but the accurate score was evaluated using : https://github.com/mseitzer/pytorch-fid
