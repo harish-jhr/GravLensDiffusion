@@ -45,28 +45,27 @@ This is the structure as in Google Drive Project Directory. Due to Github file u
 │   └── samples.npz ---> Asingle .npz file containing all 10K training images as numpy arrays.
 ```
 
-Below is the project structure as in Github:
+Below is the project structure as in Github, descriptions are just as above:
 ```bash
 ├── notebooks
-│   ├── FID_with_downscaled_imgs.ipynb          --->Carries out FID analysis by downscaling Real/GT Images with Generated Image(which are inherently having lower spatial dimension)
-│   ├── Frechet_Inception_Distance.ipynb --->Carries out FID analysis on Real Images and Generated Images(upscaled to match spatial dimension of Real Images)
-│   ├── Sample_1.ipynb ---> Contains the Implementation of Sampling to generate 100 sample images, we save a grid of 100 images (10 x 10) at all 1000 timesteps (find it at ./results/train_1)
-│   ├── Sample_2.ipynb ---> Contains the Implementation of Sampling to generate 100 sample images, we save image state at all 1000 timesteps as .npy for each of the 100 samples and 20 pngs (every 50th timestep) for each of the 100 samples 
-│   ├── Sample_3.ipynb ---> We carry out sampling and generate 10000 new images (in a loop run 100 times, each generating 100 images), save the last timestep(generated image) as both .npy and .png.
-│   ├── Train1.ipynb ---> Contains the training of Unet model , over 40 epochs using all the 10000 training images.Weights obtained here are stored at "./results/model_checkpoint.pth"
-│   └── data_download.ipynb ---> Features code to download the huge dataset from google drive link, a nit of preprocessing and augmnetation, model check and visualization of training images.
+│   ├── FID_with_downscaled_imgs.ipynb 
+│   ├── Frechet_Inception_Distance.ipynb -
+│   ├── Sample_2.ipynb 
+│   ├── Sample_3.ipynb 
+│   ├── Train1.ipynb 
+│   └── data_download.ipynb 
 ├── src
 │   ├── data_reshape.py
 │   ├── dataset.py
 │   ├── dataset2.py
-│   ├── model_unet.py ---> This module contains the U-Net model (moderately deep) that is trained to learn the denoising process (reverse diffusion) in DDPM.
-│   ├── noise_scheduler.py ---> This module contains the implementation of a linear noise scheduler, which progressively adds noise to input images in the forward diffusion process and gradually destroys information at each time step , and removes noise step by step in the reverse diffusion process to reconstruct the image
+│   ├── model_unet.py 
+│   ├── noise_scheduler.py
 │   ├── npy_npz.py
 │   ├── npy_npz2.py
-│   ├── sample.py ---> This module containss the code for the sampling procedure to generate new images.
-│   ├── sample2.py ---> Minor modifications made to the previous module, to support what we do in Sample_2.ipynb
-│   ├── sample3.py ---> Minor modifications made to the previous module, to support what we do in Sample_3.ipynb
-│   └── train.py ---> Contains the training loop to carry out the training process and learn model weights.
+│   ├── sample.py 
+│   ├── sample2.py 
+│   ├── sample3.py 
+│   └── train.py
 └──  results
 │   ├── merged.png ---> The grid gif you see below iss made using a few images from here. The process of obtaining this is explained in teh above directory structure.
 │   ├── 100_pngs ---> This contains 100 sample generated images as png files.
