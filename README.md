@@ -6,7 +6,7 @@ Then I sampled from the trained model to generate strong lensing images.
 
 FID Evaluation was then carried out on a small sample of 100 generated images.
 
-I used extensively used free GPU compute offered by Google Colab, hence my entire project directory is hosted on Google Drive(whose link I had mailed to the team while submitting evaluation tests.)
+I used extensively used free GPU compute offered by Google Colab, hence my entire project directory is hosted on Google Drive.
 ## Project Structure
 The project directory has 4 sub directories: 
 
@@ -72,7 +72,7 @@ Below is the project structure as in Github, descriptions are just as above:
 │   └── model_checkpoint.pth ---> Final weights that I am submitting
 ```
 
-Notice that I haven't uploaded the data directory and many sub directories of the results directory due to upload constraints, obtain them on the Google Drive Link, I shared.
+Notice that I haven't uploaded the data directory and many sub directories of the results directory due to upload constraints.
 
 
 ## Results
